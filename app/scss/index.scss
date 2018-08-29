@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background: #16161d; /* EIGENGRAU */
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  color: ghostwhite;
+}
