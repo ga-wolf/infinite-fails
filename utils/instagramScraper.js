@@ -27,13 +27,14 @@ async function nextVideo(page) {
 
 async function getAllVideoSources(page, urls = new Set()) {
   try {
-    const videoElem = await page.waitFor("video", { timeout: 1200 });
+    const videoElem = await page.waitFor("video", { timeout: 5000 });
     if (videoElem) {
       const src = await page.evaluate(vid => vid.src, videoElem);
       urls.add(src);
+      console.log("Video found.");
     }
   } catch (e) {
-    console.error("Video wasn't found on the page");
+    console.error("Video wasn't found.");
   }
   const morePages = await nextVideo(page);
   if (!morePages || urls.size >= MAX_VIDEOS) return urls;

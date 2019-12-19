@@ -1,11 +1,11 @@
-const json = require("../data/video_urls.json");
+const { data, url } = require("../data/video_urls.json");
 
 function initApp() {
   let currentIndex = 0;
   let video = null;
 
   function renderVideo() {
-    video.setAttribute("src", json.url + json.data[currentIndex]);
+    video.setAttribute("src", url + data[currentIndex]);
     video.play();
     currentIndex += 1;
   }
@@ -21,7 +21,7 @@ function initApp() {
   window.addEventListener("click", () => {
     document.querySelector("h1").remove();
     renderVideo();
-    video.webkitRequestFullScreen();
+    video.requestFullScreen();
   });
 }
 

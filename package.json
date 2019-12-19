@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.7.7",
     "babel-eslint": "^9.0.0",
     "babel-preset-airbnb": "^2.5.3",
     "eslint": "^5.4.0",
